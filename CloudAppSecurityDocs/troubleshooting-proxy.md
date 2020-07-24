@@ -401,12 +401,27 @@ While troubleshooting onboarding apps, there are some additional things to consi
 
 This section is for end users using apps protected by Cloud App Security and helps identify common situations that may arise in the following areas:
 
+- [Navigating to a particular URL of a suffixed app is landing on a generic page](#navigating-to-a-particular-URL-of-a-suffixed-app-is-landing-on-a-generic-page)
 - [User monitoring page is not appearing](#user-monitoring-page-is-not-appearing)
 - [Not able to access app from a third-party Identity Provider](#not-able-to-access-app-from-a-third-party-identity-provider)
 - [**Something Went Wrong** page appears](#something-went-wrong-page-appears)
 - [Clipboard actions or file controls are not being blocked](#clipboard-actions-or-file-controls-are-not-being-blocked)
 - [Downloads are not being protected](#downloads-are-not-being-protected)
 - [Additional considerations](#app-additional-considerations)
+
+
+### Navigating to a particular URL of a suffixed app is landing on a generic page
+All suffix proxies are susceptible to context loss, an issue where navigating to a link loses the full path of the link, and typically lands the user on the home page of the application. 
+
+As Microsoft, we are positioned uniquely to address this product limitation and solve context loss, and have partnered with Microsoft and non-Microsoft vendors to do so. Apps on our featured apps page marked with a (preview) flag may suffer from context loss. If you are experiencing context loss in a non-featured app, please submit a support ticket. We are working with each service individually to fix these core issues.  
+
+As a temporary mitigation, the following is a workaround for context loss 
+	
+1. Navigate to a URL where context loss occurs
+2. Note the suffix added by Cloud App Security (e.g., .us2.cas.ms) 
+3. Copy the original URL path into the browser (e.g. https://www.yammer.com /organization/threads/threadnumber) 
+4. Append the suffix to the original URL path (e.g., https://www.yammer.com.us2.cas.ms/organization/threads/threadnumber)
+5. Navigate to the new suffixed URL
 
 ### User monitoring page is not appearing
 
